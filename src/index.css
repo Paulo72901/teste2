@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-bordeaux: #722F37;
+  --color-gold: #D3AF37;
+  --color-nude: #E3BC9A;
+  --color-blush: #F5C6BD;
+  --color-offwhite: #FCFCFC;
+  --color-black: #000000;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0A0507;
+    color: #FCFCFC;
+  }
+
+  /* Exact User Typography Requirements */
+  h1, .font-h1 {
+    font-family: var(--font-serif);
+    font-weight: 500; /* Medium */
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  h2, .font-h2 {
+    font-family: var(--font-serif);
+    font-weight: 500; /* Medium */
+    font-size: 2rem; /* 32px */
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+  }
+
+  h3, .font-h3, .font-btn {
+    font-family: var(--font-sans);
+    font-weight: 700; /* Bold */
+    font-size: 0.75rem; /* 12px */
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .font-desc {
+    font-family: var(--font-sans);
+    font-weight: 300; /* Light */
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.6;
+  }
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 32s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle luxury shimmer effect */
+@keyframes subtle-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, #D3AF37 0%, #FFF3C4 50%, #D3AF37 100%);
+  background-size: 200% 100%;
+  animation: subtle-shimmer 6s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

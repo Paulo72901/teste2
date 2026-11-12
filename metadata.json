@@ -1,0 +1,6 @@
+{
+  "name": "Amor & Mistério — Caixas Misteriosas de Lingerie",
+  "description": "Assinatura exclusiva de caixas misteriosas de lingerie e moda íntima feminina com curadoria bimestral sob medida, quiz de estilo e cobrança recorrente segura.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
